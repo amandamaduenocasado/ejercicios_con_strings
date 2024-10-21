@@ -219,8 +219,8 @@ function formatNumber(number) {
   const secondNumber = word.charAt(1);
   const thirdNumber = word.charAt(2);
 
-  const totalNumber = `(${number})${number}${number})`;
-  return firstNumber + secondNumber + thirdNumber;
+  const totalNumber = `(${firstNumber})${number}${number})`;
+  return totalNumber;
 }
 const totalNumber = formatNumber('1234567890');
 console.log(resultNumber);
