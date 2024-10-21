@@ -204,26 +204,18 @@ function averageWord(wordA, wordB, wordC) {
 const resultAverage = averageWord('merluza', 'centollo', 'rodaballo');
 console.log(resultAverage);
 
-/* Crea una función que reciba un número de teléfono de 10 dígitos (como "1234567890") y lo formatee de la siguiente manera: "(123) 456-7890". 
-
-function formatNumber(numberA, numberB, numberC) {
-  const totalNumber = `(${numberA}) ${numberB}-${numberC}`;
-  return totalNumber;
-}
-
-const resultNumber = formatNumber(123, 456, 7890);
-console.log(resultNumber); */
+/* Crea una función que reciba un número de teléfono de 10 dígitos (como "1234567890") y lo formatee de la siguiente manera: "(123) 456-7890". */
 
 function formatNumber(number) {
-  const firstNumber = word.charAt(0);
-  const secondNumber = word.charAt(1);
-  const thirdNumber = word.charAt(2);
+  const firstNumber = number.substring(0, 3);
+  const secondNumber = number.substring(3, 6);
+  const thirdNumber = number.substring(6, 10);
 
-  const totalNumber = `(${firstNumber})${number}${number})`;
+  const totalNumber = `(${firstNumber}) ${secondNumber}-${thirdNumber}`;
   return totalNumber;
 }
 const totalNumber = formatNumber('1234567890');
-console.log(resultNumber);
+console.log(totalNumber);
 
 /*  Crea una función que reciba una palabra de 4 letras y la devuelva en orden inverso, duplicando cada letra. Por ejemplo, si recibe "hola", devolvería "aalloohh". */
 
@@ -251,7 +243,19 @@ function evenNumber(number) {
 const resultEven = evenNumber(24);
 console.log(resultEven);
 
-/* Crea una función que reciba dos palabras de 4 letras y verifique si contienen las mismas letras en diferente orden, por ejemplo "amor" y "mora" SIN RESOLVER */
+/* Crea una función que reciba dos palabras de 4 letras y verifique si contienen las mismas letras en diferente orden, por ejemplo "amor" y "mora" */
+
+function trueWord(word) {
+  const firstWord = word.includes('a');
+  const secondWord = word.includes('m');
+  const thirdWord = word.includes('o');
+  const fourWord = word.includes('r');
+
+  return firstWord, secondWord, thirdWord, fourWord;
+}
+
+const resultTrue = trueWord('roma');
+console.log(resultTrue);
 
 /* Crea una función que reciba un string y un número n, y devuelva los primeros n caracteres del string (puedes usar el método slice). */
 
