@@ -126,9 +126,10 @@ console.log(resultWord);
 const resultExample = guessConjugation('Silbar', 'Querer');
 console.log(resultExample); */
 
-function guessConjugation(example1, example2) {
+function guessConjugation(example1, example2, example3) {
   let firstConjugation = 'es de la primera conjugación';
   let secondConjugation = 'es de la segunda conjugación';
+  let thirdConjugation = 'es de la tercera conjugación';
 
   if (example1.endsWith('ar')) {
     firstConjugation = 'es de la primera conjugación';
@@ -142,10 +143,16 @@ function guessConjugation(example1, example2) {
     secondConjugation = 'no es de la segunda conjugación';
   }
 
-  return `El verbo ${example1} ${firstConjugation} y el verbo ${example2} ${secondConjugation}.`;
+  if (example3.endsWith('ir')) {
+    thirdConjugation = 'es de la tercera conjugación';
+  } else if (example3.endsWith('ar') || example3.endsWith('er')) {
+    thirdConjugation = 'no es de la tercera conjugación';
+  }
+
+  return `El verbo ${example1} ${firstConjugation}, el verbo ${example2} ${secondConjugation} y el verbo ${example3} ${thirdConjugation}.`;
 }
 
-const resultExample = guessConjugation('amar', 'beber');
+const resultExample = guessConjugation('amar', 'beber', 'morir');
 console.log(resultExample);
 
 /* Crea una función que reciba una palabra de 4 letras y devuelva la palabra invertida. Por ejemplo, si recibe "casa", deberá devolver "asac". */
