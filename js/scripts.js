@@ -204,18 +204,6 @@ function averageWord(wordA, wordB, wordC) {
 const resultAverage = averageWord('merluza', 'centollo', 'rodaballo');
 console.log(resultAverage);
 
-
-/*  Crea una función que reciba una palabra de 4 letras y la devuelva en orden inverso, duplicando cada letra. Por ejemplo, si recibe "hola", devolvería "aalloohh". */
-
-function strangeWord(word) {
-  const firstLetter = word.charAt(0) + word.charAt(0);
-  const secondLetter = word.charAt(1) + word.charAt(1);
-  const thirdLetter = word.charAt(2) + word.charAt(1);
-  const fourLetter = word.charAt(3) + word.charAt(1);
-
-  return fourLetter + thirdLetter + secondLetter + firstLetter;
-}
-
 /* Crea una función que reciba un número de teléfono de 10 dígitos (como "1234567890") y lo formatee de la siguiente manera: "(123) 456-7890". 
 
 function formatNumber(numberA, numberB, numberC) {
@@ -227,14 +215,26 @@ const resultNumber = formatNumber(123, 456, 7890);
 console.log(resultNumber); */
 
 function formatNumber(number) {
-  const firstNumber = word.charAt(0) 
+  const firstNumber = word.charAt(0);
   const secondNumber = word.charAt(1);
   const thirdNumber = word.charAt(2);
 
-  return (thirdNumber + secondNumber + firstNumber) ' ';
+  const totalNumber = `(${number})${number}${number})`;
+  return firstNumber + secondNumber + thirdNumber;
 }
+const totalNumber = formatNumber('1234567890');
+console.log(resultNumber);
 
-const totalNumber = 
+/*  Crea una función que reciba una palabra de 4 letras y la devuelva en orden inverso, duplicando cada letra. Por ejemplo, si recibe "hola", devolvería "aalloohh". */
+
+function strangeWord(word) {
+  const firstLetter = word.charAt(0) + word.charAt(0);
+  const secondLetter = word.charAt(1) + word.charAt(1);
+  const thirdLetter = word.charAt(2) + word.charAt(1);
+  const fourLetter = word.charAt(3) + word.charAt(1);
+
+  return fourLetter + thirdLetter + secondLetter + firstLetter;
+}
 
 const resultStrange = strangeWord('PASA');
 console.log(resultStrange);
@@ -270,4 +270,3 @@ function isWordInPhrase(phrase, word) {
 
 const resultPhrase = isWordInPhrase('Me gustan las gambas', 'gambas');
 console.log(resultPhrase);
-
